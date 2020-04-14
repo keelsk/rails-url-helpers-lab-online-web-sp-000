@@ -12,6 +12,7 @@ class StudentsController < ApplicationController
   def activate
     set_student
     activate_student_path(@student)
+    redirect 'show'
   end
 
   private
