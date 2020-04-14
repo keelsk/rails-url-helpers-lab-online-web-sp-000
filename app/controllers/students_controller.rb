@@ -23,5 +23,6 @@ class StudentsController < ApplicationController
 
     def activate_student_path(student)
       student.active = !student.active
+      student.save
     end
 end
