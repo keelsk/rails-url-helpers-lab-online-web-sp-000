@@ -10,8 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    set_student
-    @student.active = !@student.active
+    activate_student_path
     redirect 'show'
   end
 
@@ -19,5 +18,10 @@ class StudentsController < ApplicationController
 
     def set_student
       @student = Student.find(params[:id])
+    end
+
+    def activate_student_path
+      set_student
+      @student.active = !@student.active
     end
 end
