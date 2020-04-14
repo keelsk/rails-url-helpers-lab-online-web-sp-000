@@ -11,6 +11,7 @@ class StudentsController < ApplicationController
 
   def activate
     set_student
+    activate_student_path(@student)
   end
 
   private
